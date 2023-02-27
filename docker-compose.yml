@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  irankhodro:
+    image: ${DOCKER_REGISTRY-}irankhodro
+    container_name: irankhodro
+    build:
+      context: .
+      dockerfile: IranKhodro/Dockerfile
+    depends_on: 
+      - db
+  db:
+    image: redis/redis-stack
+    container_name: db
+    

@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  irankhodro:
+    environment:
+      - DOTNET_ENVIRONMENT=Development
+      - ConnectionString=redis://db:6379
+      - Cookie=ASP.NET_SessionId=tsuftchkpxrxn54q3kpo1x5d; _ga=GA1.2.1358003064.1677500186; _gid=GA1.2.246532172.1677500186; __arcsjs=9a36460f99f86d2b8e26ce0d1c0452db; TS01511309=013f7bf61fa1af1a1ec7e43e773b7932c8766e1b3b8169c236e55024ed2a37a4bbe35af4286845e9773ffa33f45a3e7041319792af; _gat=1
+      - ApiKey=66326C4C6B434537764D3961716F45376C773434387937584C48785877736F53
+      - SenderNumber=0018018949161
+      - Receptors=09134328684,09135600567
+    restart: always
+    
+  db:
+    ports:
+      - "6379:6379"
+      - "8001:8001"
+    restart: always
+    volumes:
+      - dbData:/data
+
+volumes:
+  dbData:
+     external: false
+  
