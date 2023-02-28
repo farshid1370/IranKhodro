@@ -1,14 +1,17 @@
-version: '3.4'
+﻿version: '3.4'
 
 services:
   irankhodro:
     environment:
       - DOTNET_ENVIRONMENT=Development
       - ConnectionString=redis://db:6379
-      - Cookie=ASP.NET_SessionId=tsuftchkpxrxn54q3kpo1x5d; _ga=GA1.2.1358003064.1677500186; _gid=GA1.2.246532172.1677500186; __arcsjs=9a36460f99f86d2b8e26ce0d1c0452db; TS01511309=013f7bf61fa1af1a1ec7e43e773b7932c8766e1b3b8169c236e55024ed2a37a4bbe35af4286845e9773ffa33f45a3e7041319792af; _gat=1
-      - ApiKey=66326C4C6B434537764D3961716F45376C773434387937584C48785877736F53
-      - SenderNumber=0018018949161
-      - Receptors=09134328684,09135600567
+      - Cookie=_ga=GA1.2.1358003064.1677500186; __arcsjs=5f972be930f928f4c60f7b4918a14628; ASP.NET_SessionId=jotwxth5x04xkhh2435g11qg; TS01511309=013f7bf61f5b60225048663e32845ffe61e200da0e1d73fbfed1dc39aac1de9846c005b95449dc80fbed9fb86004ad8c2c6ba9630743d30b5325bd14d3162c15cfcb249b75; _gid=GA1.2.1974302761.1677600537; _gat=1
+      - Recepters=farshid.amirkhani@gmail.com
+      - SmtpHost=smtp.gmail.com
+      - SmtpPort=587
+      - SmtpSenderEmailAddress=farshid.amirkhani@gmail.com
+      - SmtpSenderEmailPassword=rzkfzeinvyaxgjar
+      - SmtpMessageSubject=لیست بخشنامه ایران خودرو
     restart: always
     
   db:

@@ -10,6 +10,7 @@ var host = Host.CreateDefaultBuilder(args)
         services.AddHostedService<IndexCreationService>();
         services.AddSingleton(new RedisConnectionProvider(configuration["ConnectionString"]));
         services.AddSingleton<ICircularManager, CircularManager>();
+        services.AddSingleton<IEmailManager, GmailEmailProvider>();
         services.AddHostedService<Worker>();
     })
     .Build();
