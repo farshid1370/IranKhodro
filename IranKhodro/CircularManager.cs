@@ -6,6 +6,8 @@ using Redis.OM;
 using System;
 using System.Text.Json.Serialization.Metadata;
 using Microsoft.Extensions.Options;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace IranKhodro;
 
@@ -54,4 +56,5 @@ public class CircularManager : ICircularManager
         }
 
     }
+    
 }

@@ -15,8 +15,8 @@ public class GmailEmailProvider : IEmailManager
 
     public void Send(string address, string message)
     {
-        var fromAddress = new MailAddress(_options.Value.SmtpSenderEmailAddress, "From Name");
-        var toAddress = new MailAddress(address, "To Name");
+        var fromAddress = new MailAddress(_options.Value.SmtpSenderEmailAddress, _options.Value.SmtpSenderDisplayName);
+        var toAddress = new MailAddress(address);
         var smtp = new SmtpClient
         {
             Host = _options.Value.SmtpHost,

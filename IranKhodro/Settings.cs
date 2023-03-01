@@ -9,6 +9,7 @@ public class Settings
     public int SmtpPort { get; set; }
     public string SmtpSenderEmailAddress { get; set; }
     public string SmtpSenderEmailPassword { get; set; }
+    public string SmtpSenderDisplayName { get; set; }
     public string SmtpMessageSubject { get; set; }
 
 }

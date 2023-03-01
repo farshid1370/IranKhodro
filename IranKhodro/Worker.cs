@@ -23,9 +23,7 @@ namespace IranKhodro
         {
             while (!stoppingToken.IsCancellationRequested)
             {
-
-                
-                if (DateTime.Now.Hour == 16 )
+                if (DateTime.Now.Hour == 5 )
                 {
                     var list = await _circularManager.GetCircularList();
                     if (list.Count==0) continue;
